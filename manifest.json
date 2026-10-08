@@ -1,0 +1,10 @@
+{
+    "name": "Digital Literacy and Cyber Crime Awareness Portal",
+    "short_name": "CyberSafe Portal",
+    "description": "A web-based portal for digital literacy, cyber crime awareness, online safety and incident reporting.",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#071a3d",
+    "theme_color": "#071a3d",
+    "orientation": "portrait-primary"
+}

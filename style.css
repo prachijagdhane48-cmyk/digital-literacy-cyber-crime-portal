@@ -1,0 +1,924 @@
+/* =========================================
+   CYBERSAFE APP - APP STYLE
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #17233c;
+    min-height: 100vh;
+    padding-bottom: 80px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.app-header {
+    height: 75px;
+    background: #071a3d;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 7%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-icon {
+    width: 45px;
+    height: 45px;
+    background: #087ea4;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.brand h1 {
+    font-size: 21px;
+}
+
+.brand p {
+    font-size: 11px;
+    color: #aebed8;
+    margin-top: 2px;
+}
+
+.theme-btn {
+    border: none;
+    background: #102b57;
+    color: white;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+/* =========================
+   SCREENS
+========================= */
+
+.app-screen {
+    display: none;
+    max-width: 1050px;
+    margin: auto;
+    padding: 45px 25px;
+}
+
+.active-screen {
+    display: block;
+}
+
+/* =========================
+   HOME
+========================= */
+
+.welcome-card {
+    background: linear-gradient(135deg, #071a3d, #0b3d91);
+    color: white;
+    border-radius: 25px;
+    padding: 50px;
+    margin-bottom: 22px;
+    box-shadow: 0 12px 30px rgba(7, 26, 61, 0.2);
+}
+
+.welcome-icon {
+    font-size: 55px;
+    margin-bottom: 18px;
+}
+
+.small-title {
+    color: #0a91bd;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.8px;
+    margin-bottom: 8px;
+}
+
+.welcome-card .small-title {
+    color: #70dcff;
+}
+
+.welcome-card h2 {
+    font-size: 42px;
+    line-height: 1.15;
+    margin-bottom: 18px;
+}
+
+.welcome-card p:not(.small-title) {
+    max-width: 600px;
+    line-height: 1.7;
+    color: #dbe8f8;
+    margin-bottom: 28px;
+}
+
+.primary-btn {
+    border: none;
+    background: #087ea4;
+    color: white;
+    padding: 13px 22px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.primary-btn:hover {
+    background: #05637f;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   STATUS
+========================= */
+
+.status-card {
+    background: white;
+    padding: 20px 25px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+.status-card > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.status-dot {
+    width: 11px;
+    height: 11px;
+    background: #21a366;
+    border-radius: 50%;
+}
+
+.safe-text {
+    color: #16834f;
+    font-weight: bold;
+}
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title {
+    margin-bottom: 17px;
+    font-size: 22px;
+}
+
+/* =========================
+   QUICK ACTIONS
+========================= */
+
+.quick-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.quick-card {
+    border: none;
+    background: white;
+    padding: 24px 15px;
+    border-radius: 16px;
+    text-align: left;
+    cursor: pointer;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+    transition: 0.25s;
+    color: #17233c;
+}
+
+.quick-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.quick-card span {
+    display: block;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.quick-card strong {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.quick-card small {
+    color: #728096;
+}
+
+/* =========================
+   EMERGENCY CARD
+========================= */
+
+.emergency-card {
+    background: #fff1f1;
+    border: 1px solid #ffd5d5;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.emergency-card > div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.emergency-card > div > span {
+    font-size: 35px;
+}
+
+.emergency-card p {
+    color: #68758a;
+    margin-top: 5px;
+}
+
+.emergency-card button {
+    border: none;
+    background: #d9363e;
+    color: white;
+    padding: 11px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* =========================
+   SCREEN HEADING
+========================= */
+
+.screen-heading {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.screen-heading h2 {
+    font-size: 32px;
+}
+
+.back-btn {
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 12px;
+    background: white;
+    color: #17233c;
+    font-size: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.back-btn:hover {
+    background: #eaf6ff;
+}
+
+/* =========================
+   LEARNING
+========================= */
+
+.learning-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.learning-card {
+    background: white;
+    border: none;
+    padding: 30px;
+    border-radius: 17px;
+    text-align: left;
+    cursor: pointer;
+    color: #17233c;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+    transition: 0.25s;
+}
+
+.learning-card:hover {
+    transform: translateY(-4px);
+}
+
+.learning-card > span {
+    font-size: 38px;
+}
+
+.learning-card h3 {
+    margin: 15px 0 8px;
+}
+
+.learning-card p {
+    color: #68758a;
+    line-height: 1.6;
+}
+
+.info-box {
+    background: #eaf6ff;
+    border-left: 5px solid #087ea4;
+    padding: 20px;
+    margin-top: 22px;
+    border-radius: 10px;
+}
+
+.info-box p {
+    margin-top: 7px;
+    line-height: 1.6;
+}
+
+/* =========================
+   THREATS
+========================= */
+
+.app-search {
+    width: 100%;
+    padding: 15px 18px;
+    border: 2px solid #d9e2ed;
+    border-radius: 11px;
+    font-size: 15px;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+.app-search:focus {
+    border-color: #087ea4;
+}
+
+.threat-list {
+    display: grid;
+    gap: 16px;
+}
+
+.threat-card {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    display: flex;
+    gap: 20px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+.threat-card > span {
+    font-size: 40px;
+    min-width: 55px;
+}
+
+.threat-card h3 {
+    margin-bottom: 8px;
+}
+
+.threat-card p {
+    color: #68758a;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.threat-card strong {
+    color: #087ea4;
+}
+
+/* =========================
+   TOOLS
+========================= */
+
+.tool-card {
+    background: white;
+    padding: 30px;
+    border-radius: 17px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+.tool-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.tool-title > span {
+    font-size: 35px;
+}
+
+.tool-title p {
+    color: #728096;
+    margin-top: 4px;
+}
+
+.tool-card > input[type="password"] {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #d9e2ed;
+    border-radius: 9px;
+    outline: none;
+    font-size: 15px;
+}
+
+.tool-card > input[type="password"]:focus {
+    border-color: #087ea4;
+}
+
+#passwordStrength {
+    padding: 16px 0;
+    font-weight: bold;
+}
+
+.rules {
+    background: #f5f8fc;
+    padding: 17px;
+    border-radius: 10px;
+}
+
+.rules p {
+    margin: 7px 0;
+}
+
+.check-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 0;
+    border-bottom: 1px solid #edf1f5;
+}
+
+.check-row:last-child {
+    border-bottom: none;
+}
+
+.check-row input {
+    width: 18px;
+    height: 18px;
+}
+
+/* =========================
+   QUIZ
+========================= */
+
+.quiz-card {
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.07);
+}
+
+#questionNumber {
+    color: #087ea4;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#quizQuestion {
+    font-size: 21px;
+    line-height: 1.5;
+    margin-bottom: 22px;
+}
+
+#quizOptions {
+    display: grid;
+    gap: 11px;
+}
+
+#quizOptions button {
+    padding: 14px;
+    background: white;
+    border: 2px solid #dce5ef;
+    border-radius: 9px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#quizOptions button:hover {
+    background: #eaf6ff;
+    border-color: #087ea4;
+}
+
+#quizOptions button:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+#quizResult {
+    margin: 18px 0;
+    font-weight: bold;
+}
+
+#quizScore {
+    margin-top: 22px;
+    color: #087ea4;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+/* =========================
+   REPORT
+========================= */
+
+.report-info {
+    background: #eaf6ff;
+    padding: 18px;
+    border-radius: 12px;
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.report-info > span {
+    font-size: 28px;
+}
+
+.report-info p {
+    line-height: 1.6;
+}
+
+.app-form {
+    background: white;
+    padding: 30px;
+    border-radius: 17px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+.app-form label {
+    display: block;
+    font-weight: bold;
+    margin: 16px 0 7px;
+}
+
+.app-form label:first-child {
+    margin-top: 0;
+}
+
+.app-form input,
+.app-form select,
+.app-form textarea {
+    width: 100%;
+    padding: 13px;
+    border: 2px solid #d9e2ed;
+    border-radius: 9px;
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+}
+
+.app-form input:focus,
+.app-form select:focus,
+.app-form textarea:focus {
+    border-color: #087ea4;
+}
+
+.submit-btn {
+    margin-top: 22px;
+    width: 100%;
+}
+
+#reportMessage {
+    margin: 18px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.saved-reports {
+    margin-top: 30px;
+}
+
+.saved-reports h3 {
+    margin-bottom: 15px;
+}
+
+.saved-report {
+    background: white;
+    border-left: 5px solid #087ea4;
+    padding: 18px;
+    border-radius: 9px;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.saved-report h4 {
+    color: #087ea4;
+    margin-bottom: 8px;
+}
+
+/* =========================
+   EMERGENCY
+========================= */
+
+.emergency-intro {
+    text-align: center;
+    background: #fff1f1;
+    border-radius: 18px;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.emergency-intro > span {
+    font-size: 45px;
+}
+
+.emergency-intro h3 {
+    margin: 10px 0;
+}
+
+.emergency-intro p {
+    color: #68758a;
+}
+
+.emergency-steps {
+    display: grid;
+    gap: 15px;
+}
+
+.emergency-steps > div {
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    box-shadow: 0 5px 17px rgba(0, 0, 0, 0.05);
+}
+
+.emergency-steps strong {
+    min-width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #d9363e;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.emergency-steps p {
+    color: #68758a;
+    margin-top: 5px;
+    line-height: 1.5;
+}
+
+.emergency-action {
+    display: block;
+    width: fit-content;
+    margin: 25px auto 0;
+    padding: 14px 22px;
+    background: #d9363e;
+    color: white;
+    text-decoration: none;
+    border-radius: 9px;
+    font-weight: bold;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-card {
+    background: linear-gradient(135deg, #071a3d, #0b3d91);
+    color: white;
+    text-align: center;
+    padding: 45px 30px;
+    border-radius: 20px;
+}
+
+.about-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.about-card h2 {
+    margin-bottom: 15px;
+}
+
+.about-card p {
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.7;
+    color: #dbe8f8;
+}
+
+.developer-card {
+    background: white;
+    margin-top: 20px;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+.developer-card p {
+    margin-top: 15px;
+    line-height: 1.7;
+}
+
+/* =========================
+   BOTTOM NAVIGATION
+========================= */
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 72px;
+    background: white;
+    border-top: 1px solid #e3e8ef;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    z-index: 1000;
+}
+
+.bottom-nav button {
+    border: none;
+    background: transparent;
+    color: #718096;
+    min-width: 90px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.bottom-nav button span {
+    font-size: 20px;
+}
+
+.bottom-nav button small {
+    font-size: 11px;
+}
+
+.bottom-nav button:hover {
+    color: #087ea4;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark-mode {
+    background: #0c1628;
+    color: #edf4ff;
+}
+
+body.dark-mode .quick-card,
+body.dark-mode .status-card,
+body.dark-mode .learning-card,
+body.dark-mode .threat-card,
+body.dark-mode .tool-card,
+body.dark-mode .quiz-card,
+body.dark-mode .app-form,
+body.dark-mode .saved-report,
+body.dark-mode .developer-card,
+body.dark-mode .back-btn,
+body.dark-mode .bottom-nav {
+    background: #14233a;
+    color: #edf4ff;
+}
+
+body.dark-mode .quick-card small,
+body.dark-mode .learning-card p,
+body.dark-mode .threat-card p,
+body.dark-mode .tool-title p,
+body.dark-mode .emergency-intro p {
+    color: #aebed2;
+}
+
+body.dark-mode .rules,
+body.dark-mode .info-box {
+    background: #1a2d47;
+}
+
+body.dark-mode .app-form input,
+body.dark-mode .app-form select,
+body.dark-mode .app-form textarea,
+body.dark-mode .tool-card > input[type="password"],
+body.dark-mode .app-search,
+body.dark-mode #quizOptions button {
+    background: #0f1d31;
+    color: white;
+    border-color: #30445f;
+}
+
+body.dark-mode .bottom-nav button {
+    color: #b4c1d3;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    .quick-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .welcome-card h2 {
+        font-size: 35px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    body {
+        padding-bottom: 72px;
+    }
+
+    .app-header {
+        padding: 12px 18px;
+    }
+
+    .app-screen {
+        padding: 30px 16px;
+    }
+
+    .welcome-card {
+        padding: 32px 24px;
+    }
+
+    .welcome-card h2 {
+        font-size: 30px;
+    }
+
+    .quick-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .quick-card {
+        padding: 18px 13px;
+    }
+
+    .screen-heading h2 {
+        font-size: 25px;
+    }
+
+    .learning-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .threat-card {
+        flex-direction: column;
+    }
+
+    .emergency-card {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .emergency-card button {
+        width: 100%;
+    }
+
+    .bottom-nav {
+        justify-content: space-around;
+    }
+
+    .bottom-nav button {
+        min-width: auto;
+        flex: 1;
+    }
+
+    .bottom-nav button small {
+        font-size: 10px;
+    }
+
+}

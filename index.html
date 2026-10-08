@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CyberSafe Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+<!-- APP HEADER -->
+<header class="app-header">
+
+    <div class="brand">
+        <div class="brand-icon">🛡️</div>
+
+        <div>
+            <h1>CyberSafe</h1>
+            <p>Digital Safety Portal</p>
+        </div>
+    </div>
+
+    <button class="theme-btn" onclick="toggleTheme()" id="themeButton">
+        🌙
+    </button>
+
+</header>
+
+
+<!-- MAIN APP -->
+<main>
+
+    <!-- HOME SCREEN -->
+    <section id="homeScreen" class="app-screen active-screen">
+
+        <div class="welcome-card">
+
+            <div class="welcome-icon">🛡️</div>
+
+            <p class="small-title">WELCOME TO CYBERSAFE</p>
+
+            <h2>Stay Safe in the<br>Digital World</h2>
+
+            <p>
+                Learn how to protect your identity, money,
+                accounts and personal information online.
+            </p>
+
+            <button class="primary-btn" onclick="showScreen('learnScreen')">
+                Start Learning →
+            </button>
+
+        </div>
+
+
+        <!-- SAFETY STATUS -->
+        <div class="status-card">
+
+            <div>
+                <span class="status-dot"></span>
+                <strong>Safety Status</strong>
+            </div>
+
+            <span class="safe-text">Protected</span>
+
+        </div>
+
+
+        <!-- QUICK ACTIONS -->
+        <h3 class="section-title">Quick Actions</h3>
+
+        <div class="quick-grid">
+
+            <button class="quick-card"
+                    onclick="showScreen('learnScreen')">
+
+                <span>📚</span>
+                <strong>Learn</strong>
+                <small>Cyber safety basics</small>
+
+            </button>
+
+
+            <button class="quick-card"
+                    onclick="showScreen('threatScreen')">
+
+                <span>⚠️</span>
+                <strong>Threats</strong>
+                <small>Know common scams</small>
+
+            </button>
+
+
+            <button class="quick-card"
+                    onclick="showScreen('toolsScreen')">
+
+                <span>🔐</span>
+                <strong>Security Tools</strong>
+                <small>Check your security</small>
+
+            </button>
+
+
+            <button class="quick-card"
+                    onclick="showScreen('quizScreen')">
+
+                <span>🧠</span>
+                <strong>Quiz</strong>
+                <small>Test your knowledge</small>
+
+            </button>
+
+        </div>
+
+
+        <!-- EMERGENCY CARD -->
+        <div class="emergency-card">
+
+            <div>
+                <span>🚨</span>
+
+                <div>
+                    <strong>Need Emergency Help?</strong>
+
+                    <p>
+                        If you are a victim of cyber fraud,
+                        take immediate action.
+                    </p>
+                </div>
+            </div>
+
+            <button onclick="showScreen('emergencyScreen')">
+                Help
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- LEARN SCREEN -->
+    <section id="learnScreen" class="app-screen">
+
+        <div class="screen-heading">
+            <button class="back-btn" onclick="showScreen('homeScreen')">
+                ←
+            </button>
+
+            <div>
+                <p class="small-title">LEARNING CENTER</p>
+                <h2>Build Your Digital Awareness</h2>
+            </div>
+        </div>
+
+
+        <div class="learning-grid">
+
+            <button class="learning-card">
+
+                <span>🛡️</span>
+
+                <h3>Digital Safety</h3>
+
+                <p>
+                    Learn safe practices for protecting
+                    yourself while using digital services.
+                </p>
+
+            </button>
+
+
+            <button class="learning-card">
+
+                <span>🔒</span>
+
+                <h3>Data Privacy</h3>
+
+                <p>
+                    Understand how to protect your
+                    personal information online.
+                </p>
+
+            </button>
+
+
+            <button class="learning-card">
+
+                <span>⚖️</span>
+
+                <h3>Ethical Conduct</h3>
+
+                <p>
+                    Practice responsible and ethical
+                    behaviour in the digital world.
+                </p>
+
+            </button>
+
+
+            <button class="learning-card">
+
+                <span>🔎</span>
+
+                <h3>Information Evaluation</h3>
+
+                <p>
+                    Learn to identify suspicious,
+                    misleading and unreliable information.
+                </p>
+
+            </button>
+
+        </div>
+
+
+        <div class="info-box">
+
+            <h3>💡 Remember</h3>
+
+            <p>
+                Think before you click, verify before you trust,
+                and never share confidential information such as
+                passwords, PINs or OTPs.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- THREATS SCREEN -->
+    <section id="threatScreen" class="app-screen">
+
+        <div class="screen-heading">
+
+            <button class="back-btn" onclick="showScreen('homeScreen')">
+                ←
+            </button>
+
+            <div>
+                <p class="small-title">THREAT CENTER</p>
+                <h2>Know the Threats</h2>
+            </div>
+
+        </div>
+
+
+        <input
+            type="text"
+            id="crimeSearch"
+            class="app-search"
+            placeholder="🔎 Search threats..."
+            onkeyup="searchCrimes()"
+        >
+
+
+        <div class="threat-list">
+
+            <div class="threat-card crime-card">
+
+                <span>🎣</span>
+
+                <div>
+                    <h3>Phishing & Social Engineering</h3>
+
+                    <p>
+                        Fraudulent messages, websites or callers
+                        designed to trick people into sharing
+                        confidential information.
+                    </p>
+
+                    <strong>⚠️ Watch for:</strong>
+
+                    <p>
+                        Urgent requests, suspicious links,
+                        misspelled domains and OTP requests.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="threat-card crime-card">
+
+                <span>💳</span>
+
+                <div>
+                    <h3>Financial & UPI Scams</h3>
+
+                    <p>
+                        Scams designed to steal money through
+                        fraudulent payment requests or fake
+                        financial support.
+                    </p>
+
+                    <strong>⚠️ Watch for:</strong>
+
+                    <p>
+                        Unknown payment requests and callers
+                        asking for secret verification codes.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="threat-card crime-card">
+
+                <span>🪪</span>
+
+                <div>
+                    <h3>Identity Theft</h3>
+
+                    <p>
+                        Unauthorized use of someone's personal
+                        information or identity.
+                    </p>
+
+                    <strong>⚠️ Protect yourself:</strong>
+
+                    <p>
+                        Keep personal information private and
+                        use strong account security.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="threat-card crime-card">
+
+                <span>🦠</span>
+
+                <div>
+                    <h3>Malware & Ransomware</h3>
+
+                    <p>
+                        Malicious software that can damage,
+                        disrupt or restrict access to data.
+                    </p>
+
+                    <strong>⚠️ Stay safe:</strong>
+
+                    <p>
+                        Keep software updated and avoid
+                        suspicious downloads.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- SECURITY TOOLS -->
+    <section id="toolsScreen" class="app-screen">
+
+        <div class="screen-heading">
+
+            <button class="back-btn" onclick="showScreen('homeScreen')">
+                ←
+            </button>
+
+            <div>
+                <p class="small-title">SECURITY CENTER</p>
+                <h2>Security Tools</h2>
+            </div>
+
+        </div>
+
+
+        <!-- PASSWORD TOOL -->
+        <div class="tool-card">
+
+            <div class="tool-title">
+                <span>🔐</span>
+
+                <div>
+                    <h3>Password Strength</h3>
+                    <p>Check your password security.</p>
+                </div>
+            </div>
+
+
+            <input
+                type="password"
+                id="passwordInput"
+                placeholder="Enter a sample password"
+                oninput="checkPassword()"
+            >
+
+            <div id="passwordStrength">
+                Enter a password to check its strength.
+            </div>
+
+            <div class="rules">
+
+                <p>✓ Use 12+ characters</p>
+                <p>✓ Mix uppercase and lowercase letters</p>
+                <p>✓ Include numbers and symbols</p>
+                <p>✓ Avoid personal information</p>
+                <p>✓ Never reuse passwords</p>
+                <p>✓ Enable 2FA</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- HYGIENE -->
+        <div class="tool-card">
+
+            <div class="tool-title">
+                <span>✅</span>
+
+                <div>
+                    <h3>Daily Cyber Hygiene</h3>
+                    <p>Simple habits for everyday safety.</p>
+                </div>
+            </div>
+
+            <label class="check-row">
+                <input type="checkbox">
+                <span>Verify HTTPS before entering information</span>
+            </label>
+
+            <label class="check-row">
+                <input type="checkbox">
+                <span>Be careful when using public Wi-Fi</span>
+            </label>
+
+            <label class="check-row">
+                <input type="checkbox">
+                <span>Keep your system and apps updated</span>
+            </label>
+
+            <label class="check-row">
+                <input type="checkbox">
+                <span>Keep important data backed up</span>
+            </label>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- QUIZ SCREEN -->
+    <section id="quizScreen" class="app-screen">
+
+        <div class="screen-heading">
+
+            <button class="back-btn" onclick="showScreen('homeScreen')">
+                ←
+            </button>
+
+            <div>
+                <p class="small-title">KNOWLEDGE CHECK</p>
+                <h2>Cyber Safety Quiz</h2>
+            </div>
+
+        </div>
+
+
+        <div class="quiz-card">
+
+            <div id="questionNumber">
+                Question 1 of 3
+            </div>
+
+            <h3 id="quizQuestion">
+                Loading question...
+            </h3>
+
+            <div id="quizOptions"></div>
+
+            <div id="quizResult"></div>
+
+            <button
+                id="nextQuestion"
+                class="primary-btn"
+                onclick="nextQuestion()"
+                style="display:none;"
+            >
+                Next Question
+            </button>
+
+            <div id="quizScore">
+                Score: 0 / 3
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- REPORT SCREEN -->
+    <section id="reportScreen" class="app-screen">
+
+        <div class="screen-heading">
+
+            <button class="back-btn" onclick="showScreen('homeScreen')">
+                ←
+            </button>
+
+            <div>
+                <p class="small-title">INCIDENT CENTER</p>
+                <h2>Report an Incident</h2>
+            </div>
+
+        </div>
+
+
+        <div class="report-info">
+
+            <span>📝</span>
+
+            <p>
+                Use this form to record details of a cyber incident.
+                For an actual emergency, contact the official
+                cybercrime reporting service and your bank immediately.
+            </p>
+
+        </div>
+
+
+        <form id="reportForm" class="app-form" onsubmit="submitReport(event)">
+
+            <label>Your Name</label>
+
+            <input
+                type="text"
+                id="reportName"
+                placeholder="Enter name"
+                required
+            >
+
+
+            <label>Incident Type</label>
+
+            <select id="crimeType" required>
+
+                <option value="">Select incident type</option>
+
+                <option>Phishing</option>
+                <option>Financial / UPI Scam</option>
+                <option>Identity Theft</option>
+                <option>Malware / Ransomware</option>
+                <option>Other</option>
+
+            </select>
+
+
+            <label>Incident Date</label>
+
+            <input
+                type="date"
+                id="incidentDate"
+                required
+            >
+
+
+            <label>Description</label>
+
+            <textarea
+                id="reportDescription"
+                rows="5"
+                placeholder="Describe what happened..."
+                required
+            ></textarea>
+
+
+            <button class="primary-btn submit-btn" type="submit">
+                Submit Report
+            </button>
+
+        </form>
+
+
+        <div id="reportMessage"></div>
+
+
+        <div class="saved-reports">
+
+            <h3>Saved Reports</h3>
+
+            <div id="reportList"></div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- EMERGENCY SCREEN -->
+    <section id="emergencyScreen" class="app-screen">
+
+        <div class="screen-heading">
+
+            <button class="back-btn" onclick="showScreen('homeScreen')">
+                ←
+            </button>
+
+            <div>
+                <p class="small-title">EMERGENCY RESPONSE</p>
+                <h2>Cyber Crime Emergency</h2>
+            </div>
+
+        </div>
+
+
+        <div class="emergency-intro">
+
+            <span>🚨</span>
+
+            <h3>If you are a victim of cyber fraud</h3>
+
+            <p>
+                Act quickly and preserve important evidence.
+            </p>
+
+        </div>
+
+
+        <div class="emergency-steps">
+
+            <div>
+                <strong>01</strong>
+
+                <section>
+                    <h3>Preserve Evidence</h3>
+                    <p>
+                        Keep screenshots, chat logs and
+                        transaction details.
+                    </p>
+                </section>
+            </div>
+
+
+            <div>
+                <strong>02</strong>
+
+                <section>
+                    <h3>Freeze Financials</h3>
+                    <p>
+                        Contact your bank immediately and
+                        request appropriate account/card protection.
+                    </p>
+                </section>
+            </div>
+
+
+            <div>
+                <strong>03</strong>
+
+                <section>
+                    <h3>Report Online</h3>
+                    <p>
+                        Use the official Indian cybercrime
+                        reporting portal.
+                    </p>
+                </section>
+            </div>
+
+
+            <div>
+                <strong>04</strong>
+
+                <section>
+                    <h3>Call 1930</h3>
+                    <p>
+                        Use the cybercrime helpline for
+                        financial cyber fraud emergencies.
+                    </p>
+                </section>
+            </div>
+
+        </div>
+
+
+        <a
+            class="emergency-action"
+            href="https://cybercrime.gov.in/"
+            target="_blank"
+        >
+            Open Official Cybercrime Portal →
+        </a>
+
+    </section>
+
+
+
+    <!-- ABOUT SCREEN -->
+    <section id="aboutScreen" class="app-screen">
+
+        <div class="screen-heading">
+
+            <button class="back-btn" onclick="showScreen('homeScreen')">
+                ←
+            </button>
+
+            <div>
+                <p class="small-title">ABOUT THE PROJECT</p>
+                <h2>CyberSafe Portal</h2>
+            </div>
+
+        </div>
+
+
+        <div class="about-card">
+
+            <div class="about-icon">🛡️</div>
+
+            <h2>Digital Literacy & Cyber Crime Awareness</h2>
+
+            <p>
+                A web-based educational ecosystem designed to
+                improve digital awareness, online safety,
+                threat recognition and incident guidance.
+            </p>
+
+        </div>
+
+
+        <div class="developer-card">
+
+            <h3>Developed By</h3>
+
+            <p>
+                <strong>Prachi Jagdhane</strong><br>
+                Roll No: 092094 | CSD
+            </p>
+
+            <p>
+                <strong>Vrushali Thorat</strong><br>
+                Roll No: 092122 | CSD
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- BOTTOM APP NAVIGATION -->
+<nav class="bottom-nav">
+
+    <button onclick="showScreen('homeScreen')">
+        <span>🏠</span>
+        <small>Home</small>
+    </button>
+
+    <button onclick="showScreen('learnScreen')">
+        <span>📚</span>
+        <small>Learn</small>
+    </button>
+
+    <button onclick="showScreen('threatScreen')">
+        <span>⚠️</span>
+        <small>Threats</small>
+    </button>
+
+    <button onclick="showScreen('quizScreen')">
+        <span>🧠</span>
+        <small>Quiz</small>
+    </button>
+
+    <button onclick="showScreen('reportScreen')">
+        <span>📝</span>
+        <small>Report</small>
+    </button>
+
+</nav>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
